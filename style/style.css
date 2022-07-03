@@ -1,0 +1,506 @@
+
+/*================================================================
+++++++++++++++++++>>    globel section   <<<<+++++++++++++++++++
+================================================================*/
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+
+:root{
+    --main-color:#10cab7;
+    --section-padding:40px 0px 30px;
+    --secondary-color:#b9b9b949;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.container ,
+.min-container{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.heading {
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+ .heading h1{
+    font-size: 72px;
+    font-weight: 900;
+    word-spacing: -5px;
+    color: var(--secondary-color);
+    line-height: 70px;
+    text-transform: capitalize;
+}
+
+ .heading p{
+    font-size: 16px;
+    color: rgb(92, 92, 92);
+    margin-top: -20px;
+}
+
+/*================================================================
+++++++++++++++++++>>    header section   <<<<+++++++++++++++++++
+================================================================*/
+
+.header{
+    width: 100%;
+}
+
+.header .min-container nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.header .min-container nav img{
+    width: 80px;
+}
+
+.header .min-container nav .burger .icon{
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 10px 0px;
+    cursor: pointer;
+}
+
+.header .min-container nav .burger .icon span{
+    background-color: var(--secondary-color);
+    height: 2px;
+    margin:3px 0px;
+    transition: .4s ease-in-out;
+}
+
+.header .min-container nav .burger .icon span:nth-child(odd){
+    width: 100%;
+}
+
+.header .min-container nav .burger .icon span:nth-child(2){
+    width: 70%; 
+}
+
+.header .min-container nav .burger:hover .icon span:nth-child(2){
+    width: 100%;
+}
+
+.header .min-container nav .burger:hover ul{
+    display:inline-block;
+}
+
+.header .min-container nav .burger ul{
+    background-color: var(--secondary-color);
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    width: 200px;
+    list-style: none;
+    border-radius: 4px;
+    z-index: 1;
+    display: none;
+}
+
+
+.header .min-container nav .burger ul::before{
+    position: absolute;
+    content: '';
+    border-width: 10px;
+    border-color: transparent transparent var(--secondary-color) transparent;
+    border-style: solid;
+    top: -20px;
+    right: 2px;
+ }
+
+.header .min-container nav .burger ul li{
+    border-bottom:2px rgb(219, 219, 219) solid;
+    padding: 15px;
+}
+
+.header .min-container nav .burger ul li:last-child{
+   border: none;
+}
+
+.header .min-container nav .burger ul li a{
+    text-decoration: none;
+    color: #fff;
+    transition: .2s ease-in-out;
+    text-transform: uppercase;
+    height: 100%;
+    width: 100%;
+}
+
+.header .min-container nav .burger ul li:hover a{
+    padding-left: 40px;
+}
+
+
+
+/*================================================================
+++++++++++++++++++>>    landing section   <<<<+++++++++++++++++++
+================================================================*/
+
+.landing{
+    background-image: url(../img/leyre-SYX-va-2eTM-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    height: 560px;
+    position: relative;
+}
+
+.landing .landing-message {
+    position: absolute;
+    top:30%;
+    left: 50%;
+    transform: translate(-50% ,-30%);
+    min-width: 320px;
+    max-width: 100%;
+}
+
+.landing .landing-message h1{
+    color: var(--main-color);
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 72px;
+}
+
+.landing .landing-message p{
+    color: #999;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/*================================================================
+++++++++++++==++++++>>    cards section   <<<<++++++++++++=+++++++
+================================================================*/
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill ,minmax(300px,1fr));
+    grid-gap: 30px;
+    padding: var(--section-padding);
+}
+
+.cards .card{
+    text-align: center;
+}
+
+.cards .card h1{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 48px;
+    text-transform: capitalize;
+}
+
+.cards .card p{
+    font-size: 16px;
+    color: #999;
+}
+
+.cards .card .fa-solid{
+    font-size: 32px;
+    color: var(--main-color);
+    margin-bottom: 10px;
+}
+
+/*================================================================
++++++++++++++++++++>>   services section   <<<<+++++++++++++++++++
+================================================================*/
+
+.services{
+    padding: var(--section-padding);
+    background-color: rgb(250, 250, 250);
+    z-index: -1;
+    padding-bottom: 60px;
+}
+
+.services .min-container .services-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill ,minmax(300px,1fr));
+    gap: 20px;
+}
+
+.services .min-container .services-cards .col{
+    margin-bottom: -20px;
+}
+
+.services .min-container .services-cards .col .serv{
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.services .min-container .services-cards .col .serv h1{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    line-height: 16px;
+    margin-top: 0px;
+}
+
+.services .min-container .services-cards .col .serv div p{
+    font-size: 16px;
+    color: #999;
+}
+
+.services .min-container .services-cards .col .serv div {
+    padding-left: 20px;
+} 
+
+.services .min-container .services-cards .col .serv .fa-solid , .fa-brands{
+    color: var(--main-color);
+    font-size: 30px;
+    flex-basis:30px;
+}
+
+.services .min-container .services-cards .services-image{
+    position: relative;
+    z-index: 0;
+}
+
+.services .min-container .services-cards .services-image::after{
+    position: absolute;
+    content: '';
+    width: 100px;
+    height: calc(100% + 60px);
+    background-color:rgb(211, 210, 210);
+    top: -30px;
+    right: -50px;
+    z-index: -1;
+}
+
+.services .min-container .services-cards .services-image img{
+    width: 100%;
+    position: relative;
+}
+
+/*================================================================
+++++++++++++++++++>>    portfolio section   <<<<+++++++++++++++++
+================================================================*/
+
+.portfolio-section{
+    padding: var(--section-padding);
+}
+
+.portfolio{
+    display: grid;
+    grid-template-columns: repeat(auto-fill ,minmax(300px,1fr));
+    gap: 10px;
+}
+
+.portfolio .card img{
+    width: 100%;
+}
+
+/*================================================================
+++++++++++++==++++++>>    about section   <<<<++++++++++++=+++++++
+================================================================*/
+
+.about{
+    padding: var(--section-padding);
+    background-color: rgb(250, 250, 250);
+    z-index: 1;
+}
+
+.about .container .about-cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .container .about-cards p{
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.about .container .about-cards p:nth-child(1){
+    font-weight: 900;
+    margin-top: 0px;
+}
+
+.about .container .about-cards p:nth-child(2){
+   font-weight: 100;
+   color: #999;
+}
+
+.about .container .about-cards hr{
+    width: 30%;
+    background-color: var(--main-color);
+    height: 1px;
+    border: none;
+}
+
+.about .container .about-cards .deatails-image {
+    width:360px;
+    padding-left:20px;
+    position: relative;
+    z-index: 0;
+}
+
+.about .container .about-cards .deatails-image::before{
+    position: absolute;
+    content: '';
+    width: 80px;
+    height: calc(100% + 50px);
+    background-color: rgb(224, 223, 223);
+    top: -25px;
+    left: 0px;
+    z-index: -1;
+}
+
+.about .container .about-cards .deatails-image::after{
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: calc(100% - 80px);
+    border-color: var(--main-color);
+    border-style: solid;
+    border-width: 80px;
+    border-top: none;
+    border-right: none;
+    top: -25px;
+    right: -50px;
+    z-index: -1;
+}
+
+.about .container .about-cards .deatails-image img{
+    width: 100%;
+}
+
+.about .container .about-cards .details{
+    margin-left: 90px;
+    max-width: 60%;
+}
+
+/*================================================================
+++++++++++++==++++++>>    contact section   <<<<++++++++++++=+++++++
+================================================================*/
+
+.contact{
+    padding: var(--section-padding);
+}
+
+.contact .heading{
+    padding-bottom: 40px;
+}
+
+.contact .container p{
+    font-size: 42px;
+    color: #999;
+    line-height: 48px;
+    margin-top: 0px;
+}
+
+.contact .container p:nth-child(even){
+    font-size: 16px;
+    color: #999;
+    margin-left: 60px;
+}
+
+.contact .container span{
+    color: var(--main-color);
+    padding-left: 30px;
+}
+
+/*================================================================
++++++++++++++++++++>>  footer section   <<<<+++++++++++++++++++++
+================================================================*/
+
+.footer{
+    padding: 15px 0px;
+    background-color: var(--main-color);
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+}
+
+/*================================================================
++++++++++++++++>>  mobile resposive section   <<<<+++++++++++++++
+================================================================*/
+
+@media (max-width:767px){
+    .services .min-container .services-cards .col .serv{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        text-align: center;
+    }
+    .services .min-container .services-cards .col i{
+        margin: 30px auto 20px;
+    }
+    .heading h1{
+        font-size: 62px;
+        line-height: 62px;
+    }
+    .contact .container p{
+        font-size: 24px;
+        color: #999;
+        line-height: 32px;
+        margin-top: 0px;
+    }
+    .landing h1{
+        font-size: 32px;
+    }
+}
+
+
+@media (max-width:991px){
+    .about .container .about-cards .deatails-image {
+        display:none;
+     }
+    .about .container .about-cards{
+        display: inline-block;
+        text-align: center;
+        margin: auto;
+     }
+    .about .container .about-cards .details{
+        margin:auto;
+        max-width: 80%;
+    }
+    .about .container .about-cards hr{
+        margin: auto;
+     }
+     .services .min-container .services-cards .services-image{
+       display: none;
+    }
+}
+
+@media (min-width:768px){
+    .container{
+       width: 750px;
+    }
+    .min-container{
+        width:720px;
+    }
+}
+
+@media (min-width:992px){
+    .container{
+        width: 970px;
+    }
+    .min-container{
+        width:940px;
+    }
+}
+
+@media (min-width:1200px){
+    .container{
+        width: 1170px;
+    }
+    .min-container{
+       width:1140px;
+    }
+}
